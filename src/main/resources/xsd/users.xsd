@@ -2,7 +2,8 @@
            xmlns:tns = "http://tutorialspoint/schemas"
            targetNamespace = "http://tutorialspoint/schemas"
            elementFormDefault = "qualified">
-    <xs:element name="getCountryRequest">
+
+    <xs:element name="getUserRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element type="xs:string" name="name"/>
@@ -11,20 +12,20 @@
     </xs:element>
 
 
-<xs:element name="getCountryResponse">
+<xs:element name="getUserResponse">
     <xs:complexType>
         <xs:sequence>
-            <xs:element name="country" type="tns:country"/>
+            <xs:element name="user" type="tns:user"/>
         </xs:sequence>
     </xs:complexType>
 </xs:element>
 
 
-    <xs:complexType name="country">
+    <xs:complexType name="user">
         <xs:sequence>
             <xs:element type="xs:string" name="name"/>
-            <xs:element type="xs:string" name="population"/>
-            <xs:element type="xs:string" name="capital"/>
+            <xs:element type="xs:integer" name="age"/>
+            <xs:element type="xs:boolean" name="gender"/>
         </xs:sequence>
     </xs:complexType>
 
